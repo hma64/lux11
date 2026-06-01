@@ -12,50 +12,17 @@
   </header>
 
   <main id="home">
-    <!-- HERO SLIDER -->
-    <section class="hero-slider" id="heroSlider">
-      <div class="hero-slides">
-        <div class="hero-slide">
-          <img src="assets/hero1.webp" alt="Collection Tendance" loading="eager" />
-          <div class="hero-slide-overlay">
-            <div class="hero-slide-content">
-              <h2>Nouvelle<br><span>Collection</span><br>Printemps 2025</h2>
-              <p>Découvrez les dernières tendances de la maison.</p>
-              <a class="btn btn-primary" href="produits.html">Voir la collection</a>
-            </div>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="heroSection">
+      <img src="assets/hero1.webp" alt="Collection Tendance" loading="eager" class="hero-image" />
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <div class="container hero-text-wrapper">
+            <h2 class="hero-title">Nouvelle<br><span>Collection</span><br>Printemps 2025</h2>
+            <p class="hero-description">Découvrez les dernières tendances de la maison.</p>
+            <a class="btn btn-primary" href="produits.html">Voir la collection</a>
           </div>
         </div>
-        <div class="hero-slide">
-          <img src="assets/hero2.webp" alt="Vente Flash" loading="lazy" />
-          <div class="hero-slide-overlay">
-            <div class="hero-slide-content">
-              <h2>Vente <span>Flash</span><br>Jusqu'à -50%</h2>
-              <p>Offres exclusives, durée limitée.</p>
-              <a class="btn btn-primary" href="produits.html?category=vente-flash">Profiter</a>
-            </div>
-          </div>
-        </div>
-        <div class="hero-slide">
-          <img src="assets/hero3.webp" alt="Déstockage" loading="lazy" />
-          <div class="hero-slide-overlay">
-            <div class="hero-slide-content">
-              <h2>Déstockage<br><span>Exceptionnel</span></h2>
-              <p>Des produits de qualité à prix réduit.</p>
-              <a class="btn btn-primary" href="produits.html?category=destockage">Explorer</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button class="hero-prev" aria-label="Précédent">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-      <button class="hero-next" aria-label="Suivant">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
-      <div class="hero-dots">
-        <button class="hero-dot active" aria-label="Slide 1"></button>
-        <button class="hero-dot" aria-label="Slide 2"></button>
-        <button class="hero-dot" aria-label="Slide 3"></button>
       </div>
     </section>
 
@@ -101,15 +68,18 @@
         <div class="footer-social">
           <a class="footer-social-link" href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4[...]
+            </svg>
           </a>
           <a class="footer-social-link" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 3H9.75A4.75 4.75 0 0 0 5 7.75V11.5H2.5v4H5V22h4.5v-6.5h3.25l.5-4H9.5V8.25c0-.69.56-1.25 1.25-1.25h2.25V3Z"/></svg>Facebook
           </a>
           <a class="footer-social-link" href="https://wa.me/21698137767" target="_blank" rel="noopener" aria-label="WhatsApp">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.[...]
+            </svg>
           </a>
           <a class="footer-social-link" href="https://m.me/" target="_blank" rel="noopener" aria-label="Messenger">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 5.92 2 10.5c0 2.76 1.4 5.21 3.6 6.75L5 22l4.05-2.2c.95.24 1.95.36 3 .36 5.52 0 10-3.92 10-8.5S17.52 2 12 2Zm1.44 11[...]
+            </svg>
           </a>
         </div>
       </div>
@@ -122,9 +92,8 @@
 
   <script type="module" src="js/index-page.js"></script>
   <script type="module">
-    import { injectNav, initHeroSlider } from './js/nav.js';
+    import { injectNav } from './js/nav.js';
     injectNav({ page: 'home' });
-    initHeroSlider('heroSlider');
   </script>
   <script type="module" src="js/admin-trigger.js"></script>
 </body>
