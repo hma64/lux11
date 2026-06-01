@@ -272,133 +272,100 @@ a {
   background: #fafafa;
 }
 
-/* ── MODERN HERO SECTION ────────────────────────────────────────────── */
+/* ── HERO SECTION ────────────────────────────────────────────────── */
 .hero-section {
   width: 100%;
-  padding: 20px 20px;
-  margin-bottom: 20px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
 }
 
 .hero-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 40px;
-  max-width: var(--container);
-  margin: 0 auto;
-  background: #fff;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-}
-
-.hero-image-wrapper {
-  overflow: hidden;
-  border-radius: 16px;
+  position: relative;
+  width: 100%;
   height: 100%;
-  min-height: 350px;
 }
 
-.hero-image {
+.hero-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
-  display: block;
+  z-index: 1;
 }
 
-.hero-content-wrapper {
-  padding: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 2;
 }
 
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.hero-text-content {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+  z-index: 3;
+  color: white;
+  max-width: 500px;
 }
 
 .hero-title {
-  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  font-size: clamp(2rem, 5vw, 3.2rem);
   line-height: 1.15;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-weight: 900;
-  color: var(--black);
-  margin: 0;
+  color: #ffffff;
+  margin: 0 0 12px 0;
 }
 
 .hero-title span {
   color: var(--gold);
 }
 
-.hero-subtitle {
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--text-soft);
-  margin: 0;
-}
-
 .hero-description {
-  font-size: 0.95rem;
-  color: var(--text-soft);
-  line-height: 1.6;
-  margin: 8px 0 0 0;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 12px 0 20px 0;
+  line-height: 1.5;
   font-weight: 500;
 }
 
-.hero-content-wrapper .btn {
-  margin-top: 16px;
-  align-self: flex-start;
+.hero-text-content .btn {
+  margin-top: 0;
   padding: 12px 28px;
   font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
 }
 
-.hero-content-wrapper .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
   .hero-section {
-    padding: 12px 16px;
-    margin-bottom: 12px;
+    height: 300px;
+    margin-bottom: 20px;
   }
 
-  .hero-container {
-    grid-template-columns: 1fr;
-    gap: 0;
-    border-radius: 12px;
-  }
-
-  .hero-image-wrapper {
-    min-height: 280px;
-    border-radius: 12px 12px 0 0;
-  }
-
-  .hero-content-wrapper {
-    padding: 28px 20px;
-    border-radius: 0 0 12px 12px;
+  .hero-text-content {
+    left: 20px;
+    max-width: 90%;
   }
 
   .hero-title {
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
   }
 
-  .hero-text {
-    gap: 10px;
+  .hero-description {
+    font-size: 0.9rem;
   }
 }
 
-/* ────────────────────────────────────────────────────────────────────── */
+/* ──────────────────────────────────────────────────────────────────── */
 
 .hero {
   background:
@@ -919,7 +886,6 @@ a {
   color: #1a6fc4;
 }
 
-/* Make the discounted final price red when an old price is present */
 @supports(selector(.price-wrap:has(.old-price))) {
   .price-wrap:has(.old-price) .price {
     color: #c62828;
@@ -933,7 +899,6 @@ a {
   font-weight: 600;
 }
 
-/* Sizes line under price */
 .product-sizes-line {
   font-size: 0.82rem;
   color: var(--text-soft);
